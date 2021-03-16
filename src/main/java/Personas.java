@@ -1,19 +1,22 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class Personas {
+public class Personas{
     String nombre;
     String correo;
-    List<Tareas> tareas = new ArrayList<Tareas>();
+    List<Tareas> tareas;
 
     public void Personas(){
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Nombre de la persona:\n");
+        this.nombre=sc.nextLine();
+        System.out.println("Correo de la persona:\n");
+        this.correo=sc.nextLine();
 
-    }
-    public void Personas(String nombre,String correo,ArrayList<Tareas> tareas){
-        this.nombre=nombre;
-        this.correo=correo;
-        this.tareas=tareas;
+        this.tareas=new ArrayList<>();
+
     }
 
     public  void addTarea(Tareas tarea){
